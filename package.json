@@ -1,0 +1,19 @@
+{
+  "name": "my-rss-feed",
+  "version": "1.0.0",
+  "description": "my-rss-feed",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run start",
+    "start": "node server.js"
+  },
+  "author": "lemonshushu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "npm": "^7.18.1",
+    "socket.io": "^4.1.2",
+    "xmlbuilder": "^15.1.1"
+  }
+}
