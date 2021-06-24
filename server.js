@@ -19,9 +19,8 @@ function writeFile(xml) {
 
 function buildXML(jsonResponse) {
   const firstItem = jsonResponse.list[0];
-  const root = builder.create('root');
-  const channel = root.ele('rss', {'version': '2.0'})
-    .ele('channel');
+  const root = builder.create('rss', {'version': '2.0'});
+  const channel = root.ele('channel');
   channel.ele('title', null, 'my-rss-feed')
   channel.ele('link', null, `https://sports.news.naver.com`)
   channel.ele('description', null, 'my-rss-feed')

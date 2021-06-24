@@ -1,19 +1,17 @@
 <?xml version="1.0"?>
-<root>
   <rss version="2.0">
     <channel>
       <title>my-rss-feed</title>
       <link>https://sports.news.naver.com</link>
       <description>my-rss-feed</description>
-      <lastBuildDate>1624536136833</lastBuildDate>
+      <lastBuildDate>1624538119748</lastBuildDate>
       <language>ko-kr</language>
       <item>
-        <title>도쿄는 못가지만… 훌쩍 커진 ‘강심장’</title>
-        <link>https://sports.news.naver.com/news.nhn?oid=022&amp;aid=0003593824</link>
-        <guid>022</guid>
-        <pubDate>2021.06.24 19:36</pubDate>
+        <title>‘올 시즌  0점대 평균자책’ 한화 강재민 슬라이더엔…끼·감·깡 있다</title>
+        <link>https://sports.news.naver.com/news.nhn?oid=032&amp;aid=0003081839</link>
+        <guid>032</guid>
+        <pubDate>2021.06.24 21:04</pubDate>
         <description/>
       </item>
     </channel>
   </rss>
-</root>
