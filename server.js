@@ -58,6 +58,10 @@ async function getData() {
 // });
 // server.listen(process.env.PORT || 3000);
 
+app.get('/first-item', (req, res) => {
+  res.sendFile(__dirname + '/feeds/first-item.html');
+})
+
 app.listen(process.env.PORT|| 3000, () => {
   console.log(`Server is listening`);
   setInterval(getData, 60000);
