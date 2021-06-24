@@ -59,7 +59,7 @@ async function getData() {
 // server.listen(process.env.PORT || 3000);
 
 app.get('/first-item', (req, res) => {
-  res.sendFile(__dirname + '/feeds/first-item.html');
+  res.sendFile(__dirname + '/feeds/first-item.xml');
 })
 
 app.listen(process.env.PORT|| 3000, () => {
