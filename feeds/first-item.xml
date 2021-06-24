@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root>
+  <rss version="2.0">
+    <channel>
+      <title>my-rss-feed</title>
+      <link>https://sports.news.naver.com</link>
+      <description>my-rss-feed</description>
+      <lastBuildDate>1624536136833</lastBuildDate>
+      <language>ko-kr</language>
+      <item>
+        <title>도쿄는 못가지만… 훌쩍 커진 ‘강심장’</title>
+        <link>https://sports.news.naver.com/news.nhn?oid=022&amp;aid=0003593824</link>
+        <guid>022</guid>
+        <pubDate>2021.06.24 19:36</pubDate>
+        <description/>
+      </item>
+    </channel>
+  </rss>
+</root>
