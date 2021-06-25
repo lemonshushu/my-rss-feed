@@ -53,9 +53,6 @@ async function getHHNews() {
         buildItem(article, content, url, item);
         let xml = rss.end({pretty: true});
         xml = xml.replace('<rss>', '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">');
-        const substrIndex = xml.indexOf('<p class="source">');
-        if (substrIndex != -1) xml = xml.slice(0, substrIndex);
-        xml += ']]></content:encoded></item></channel></rss>';
         writeFile(xml, 'HH-news');
         console.log('xml file written')
       }
