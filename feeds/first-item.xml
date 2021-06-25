@@ -1,17 +1,477 @@
 <?xml version="1.0"?>
-  <rss version="2.0">
-    <channel>
-      <title>my-rss-feed</title>
-      <link>https://sports.news.naver.com</link>
-      <description>my-rss-feed</description>
-      <lastBuildDate>1624538119748</lastBuildDate>
-      <language>ko-kr</language>
-      <item>
-        <title>‘올 시즌  0점대 평균자책’ 한화 강재민 슬라이더엔…끼·감·깡 있다</title>
-        <link>https://sports.news.naver.com/news.nhn?oid=032&amp;aid=0003081839</link>
-        <guid>032</guid>
-        <pubDate>2021.06.24 21:04</pubDate>
-        <description/>
-      </item>
-    </channel>
-  </rss>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>네이버 스포츠-야구-한화</title>
+    <link>https://sports.news.naver.com/kbaseball/news/index?isphoto=N&amp;type=team&amp;team=HH</link>
+    <lastBuildDate>1624608198646</lastBuildDate>
+    <language>ko</language>
+    <item>
+      <author>스포츠조선</author>
+      <title>"당당해서 좋다!" '빵빵즈' 얼굴엔 '뉴 한화'의 자신감이 담겨 있다[SC초점]</title>
+      <link>https://sports.news.naver.com/news.nhn?oid=076&amp;aid=0003746758</link>
+      <guid>https://sports.news.naver.com/news.nhn?oid=076&amp;aid=0003746758</guid>
+      <description>정은원-노시환-조한민(왼쪽부터). 한화이글스 제공[스포츠조선 박상경 기자] 한화 이글스 내야수 정은원 노시환, 외야수 조한민은 '빵빵(00)즈'로 통한다. ...</description>
+      <pubDate>2021.06.25 11:00</pubDate>
+      <content:encoded><![CDATA[
+			<div class="content_area">
+				
+				
+					
+					
+					
+						<div class="news_headline">
+							
+								
+								
+								
+									<span class="logo" id="pressLogo"><a href="http://sports.chosun.com" class="link" target="_blank"><img height="35" src="https://mimgnews.pstatic.net/image/upload/office_logo/076/2017/01/05/logo_076_11_20170105110805.gif" alt="스포츠조선" onError="javascript:setPressLogo('스포츠조선');"/></a></span>
+								
+							
+							<h4 class="title">"당당해서 좋다!" '빵빵즈' 얼굴엔 '뉴 한화'의 자신감이 담겨 있다[SC초점]</h4>
+							<div class="info">
+								<span>기사입력 2021.06.25. 오전 11:00</span>
+								<span><span class="bar"></span>최종수정 2021.06.25. 오전 11:00</span>
+								
+									<a target="_blank" href="http://sports.chosun.com/news/ntype.htm?id=202106260100207110013252&servicedate=20210625" class="press_link">기사원문</a>
+								
+							</div>
+							
+						</div>
+					
+				
+				
+					<div class="news_work">
+						<div class="count">
+							<div class="_reactionModule u_likeit" data-sid="SPORTS" data-did="SPORTS" data-cid="ne_076_0003746758" style="visibility: hidden;">
+								<a class="u_likeit_button _face" href="#" onclick="return false;" role="button" data-label="news" aria-haspopup="true" aria-pressed="false" style="display:none;">
+									<span class="u_likeit_icons _icons">
+                        				<span class="u_likeit_icon __reaction__like"><span class="u_likeit_blind">좋아요</span></span>
+                    				</span>
+									<span class="u_likeit_blind">좋아요 평가하기</span>
+									<span class="u_likeit_text _count">공감</span>
+								</a>
+								<ul class="u_likeit_layer _faceLayer" role="menu" style="display:none;">
+									<li class="u_likeit_list good" role="menuitem">
+										<a class="u_likeit_list_button _button" data-type="like" href="#" role="button" aria-selected="false">
+											<span class="u_likeit_list_name _label">좋아요</span>
+											<span class="u_likeit_list_count _count">0</span>
+										</a>
+									</li>
+									<li class="u_likeit_list sad" role="menuitem">
+										<a class="u_likeit_list_button _button" data-type="sad" href="#" role="button" aria-selected="false">
+											<span class="u_likeit_list_name _label">슬퍼요</span>
+											<span class="u_likeit_list_count _count">0</span>
+										</a>
+									</li>
+									<li class="u_likeit_list angry" role="menuitem">
+										<a class="u_likeit_list_button _button" data-type="angry" href="#" role="button" aria-selected="false">
+											<span class="u_likeit_list_name _label">화나요</span>
+											<span class="u_likeit_list_count _count">0</span>
+										</a>
+									</li>
+									<li class="u_likeit_list fan" role="menuitem">
+										<a class="u_likeit_list_button _button" data-type="fan" href="#" role="button" aria-selected="false">
+											<span class="u_likeit_list_name _label">팬이에요</span>
+											<span class="u_likeit_list_count _count">0</span>
+										</a>
+									</li>
+									<li class="u_likeit_list want" role="menuitem">
+										<a class="u_likeit_list_button _button" data-type="want" href="#" role="button" aria-selected="false">
+											<span class="u_likeit_list_name _label">후속기사 원해요</span>
+											<span class="u_likeit_list_count _count">0</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="sns_share">
+								<a href="#" class="naver-splugin" data-style="unity" data-option="{baseElement:'count', align:'left' }" data-oninitialize="splugin_oninitialize();"><span class="naver-splugin-c sns_share_ico"></span></a>
+							</div>
+						</div>
+						<div class="setting">
+							
+							<a href="#" class="article_font" id="fontSelectBox">글꼴</a>
+							
+							<span class="article_zoom_tit" id="fontSizeTitle" style="display:none;">글자크기</span>
+							
+							<ul class="font_set" id="fontSelectList">
+							</ul>
+							
+							<a href="javascript:scaleFont(1)" class="article_zoom_in"><span class="blind">본문 텍스트 한단계 확대</span></a>
+							<a href="javascript:scaleFont(-1)" class="article_zoom_out"><span class="blind">본문 텍스트 한단계 축소</span></a>
+							<a href="javascript:print('076', '0003746758');" class="article_print"><span class="blind">본문 프린트</span></a>
+						</div>
+					</div>
+					<div class="news_end" id="newsEndContents">
+						
+						
+							<span class="end_photo_org"><img src="https://imgnews.pstatic.net/image/076/2021/06/25/2021062601002071100132521_20210625110007955.jpg?type=w647" alt/><em class="img_desc">정은원-노시환-조한민(왼쪽부터). 한화이글스 제공</em></span>[스포츠조선 박상경 기자] 한화 이글스 내야수 정은원 노시환, 외야수 조한민은 '빵빵(00)즈'로 통한다. 2000년에 태어난 세 선수의 공통점을 가리키는 말.<br/><br/>그런데 요즘 '빵빵즈'의 얼굴을 볼 때마다 한화 선수, 관계자, 팬들의 얼굴은 폭소로 물든다. 경기 때마다 이들의 얼굴엔 'ㅎㅎ', '↑↑', 'ㅋㅋ', 'ㅠㅠ' 등 여러 가지 뜻을 담은 페인팅이 돼 있다. 햇빛으로 인한 눈부심을 방지하기 위해 낮 경기 때 주로 눈밑에 붙이는 '아이패치'에 착안, 패치 크림으로 얼굴에 그림을 그린 것이다. 이들은 "밝고 즐거운 더그아웃 분위기를 만들고 싶어서 독특하게 발라봤다"라며 "얼굴을 보면 같이 웃을 수 있어서 효과가 좋은 거 같다"고 설명했다. 지난 16일 롯데와의 대전 더블헤더에서 첫 선을 보인 '빵빵즈 쇼'는 꾸준히 이어지고 있다.<br/><br/>카를로스 수베로 감독은 '빵빵즈 쇼'를 어떻게 바라보고 있을까.<br/><br/>수베로 감독은 미소를 지으며 "그런 것들도 부담감을 이겨내는 방법 중 하나"라고 말했다. 그는 "실력이나 준비가 안된 친구가 그런 행동을 한다면 단순히 장난으로 치부하거나 가볍다는 인상을 줄 수도 있다"며 "얼굴에 그런 칠을 한 선수들 모두 우리 팀에서 중요한 역할을 맡고 있는 어린 선수"라고 덧붙였다. 그러면서 "어린 선수들이 자신의 실력을 보여줄 수 있다는 자신감, 정체성을 당당하게 표출하는 것 같다. 그런 면에서 긍정적으로 보고 있다"고 웃었다.<br/><br/>한화는 올 시즌 전까지만 해도 '절대 1약'이라는 달갑잖은 꼬리표를 달고 다녔다. 시즌 개막 두달이 지난 현재 하위권에 머물고 있지만, 무기력한 패배나 긴 연패 없이 쉽게 무너지지 않는 모습을 이어가고 있다. 18연패 악몽을 겪었던 지난 시즌과도 분명 달라졌다는 평가. 이런 가운데 '젊은 코어' 정은원 노시환은 개인 지표 부문에서도 리그 선두를 달리는 등 한화의 새로운 희망으로 자리 잡아가고 있다. 이런 어린 선수들이 스스로 팀 분위기를 이끌어가려는 노력, 자신감을 보여주는 것은 사령탑 입장에선 함박웃음을 지을 만하다. 리빌딩을 거쳐 달라질 한화의 모습에 대한 기대감도 더 커질 수밖에 없다. <br/><br/>박상경 기자 ppark@sportschosun.com<br/><br/><a href="http://unse.sportschosun.com/unse/theme/savemoney/form" target="_new"><b>▶재테크 잘하려면? 무료로 보는 금전 사주</b></a><br/><br/>- Copyrightsⓒ <a href="http://sports.chosun.com/" target="_new">스포츠조선(http://sports.chosun.com/)</a>, 무단 전재 및 재배포 금지<br/>
+						
+						
+						
+						
+						<p class="source"><b>기사제공</b> 스포츠조선</p>
+
+						
+
+						
+						
+
+						<!-- /* 기자 카드 + 본문 내 기자 정보 -->
+						<div class="reporter_area">
+							
+							
+							
+								
+								
+								<div class="reporter">
+									<div class="reporter_profile">
+										
+											
+											
+												<div class="link_press">
+													<div class="press"><img src=" https://mimgnews.pstatic.net/image/upload/office_logo/076/2017/01/11/logo_076_6_20170111151211.jpg " height="20" alt="스포츠조선" title class="press_img" onerror="$(this).parent().hide();"/></div>
+													<div class="name">박상경</div>
+												</div>
+											
+										
+									</div>
+									<p class="email"></p>
+								</div>
+								
+							
+							
+							
+								
+								<div class="reporter _type_journalist _JOURNALIST_15504">
+									<div class="reporter_profile">
+										
+										<div class="profile_info">
+											<a href="https://media.naver.com/journalist/076/15504" class="link_press" onclick="clickcr(this, 'art.more', '', '', event);">
+												<div class="press"><img src=" https://mimgnews.pstatic.net/image/upload/office_logo/076/2017/01/11/logo_076_6_20170111151211.jpg " height="20" alt="스포츠조선" title class="press_img" onerror="$(this).parent().hide();"/></div>
+												<div class="name">박상경 기자</div>
+											</a>
+											<div class="subscribe">
+												<button type="button" class="button_subscribe _reporter_subscribe_btn" data-journalist-id="15504">구독</button>
+												<!-- <button type="button" class="button_subscribe is_on">구독중</button> -->
+
+												<!-- [D] 레이어 토글 -->
+												<div class="subscribe_layer" style="display: none">
+													<p><strong>박상경 기자의 구독을 <br/>취소하시겠습니까?</strong><br/>구독에서 해당 기자의 기사가 제외됩니다.</p>
+													<div class="button_group">
+														<button type="button" class="button_layer _btn_y" data-journalist-id="15504">예</button>
+														<button type="button" class="button_layer _btn_n">아니오</button>
+													</div>
+													<button type="button" class="button_layer_close"><span class="blind">닫기</span></button>
+												</div>
+											</div>
+										</div>
+										<div class="subscribe_info">
+											<dl class="subscribe_info_list">
+												<div class="subscribe_info_item" style="display:none">
+													<dt>구독자</dt>
+													<dd class="_reporter_subscribe_count">-</dd>
+												</div>
+												<div class="subscribe_info_item _reactionModule" data-sid="JOURNALIST" data-cid="15504" data-ccounttype="period" style="display:none">
+													<dt>응원수</dt>
+													<dd class="_reporter_cheer_count">-</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+									
+
+									<div class="reporter_morenews">
+										<ul class="morenews_list">
+											
+											<li class="morenews_item">
+												<a href="/news.nhn?oid=076&aid=0003745557" class="link_morenews" onclick="clickcr(this, 'art.bestart', '', '', event);">[대구 리포트]'독수리 사냥꾼' 위용 떨친 뷰캐넌, 다승 선두 '정조준'</a>
+											</li>
+											
+											<li class="morenews_item">
+												<a href="/news.nhn?oid=076&aid=0003746255" class="link_morenews" onclick="clickcr(this, 'art.bestart', '', '', event);">쉬어가는 김민우-돌아온 킹험, 한화 선발진 어떻게 바뀔까[대구 핫포커스]</a>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+								
+								
+							
+							
+							
+							<div class="reporter_recommend" style="display:none">
+							</div>
+						</div>
+
+						
+
+						<!-- 카피라이트 배너 -->
+						<div class="copyright">
+							<p>Copyright ⓒ 스포츠조선. All rights reserved. 무단 전재 및 재배포 금지.</p>
+						</div>
+
+						<!-- 기사 분류 -->
+						<div class="categorize" id="_article_section_guide">
+							<a href="#wa_categorize_tooltip" class="btn_guide_categorize" role="button" aria-describedby="wa_categorize_tooltip">기사 섹션 분류 가이드</a>
+							<div class="guide_categorize" style="display: none;">
+								<em class="guide_title">기사 섹션 분류 안내</em>
+								<p class="guide_text" role="tooltip" id="wa_categorize_tooltip">스포츠 기사 섹션(종목) 정보는 언론사 분류와 기술 기반의 자동 분류 시스템을 따르고 있습니다. 오분류에 대한 건은 네이버스포츠로 제보 부탁드립니다.</p>
+								<a href="https://help.naver.com/support/contents/contents.nhn?serviceNo=1001&categoryNo=21210" class="btn_report" target="_blank" title="새창">오분류 제보하기</a>
+								<button type="button" class="btn_close"><span class="blind">가이드 닫기</span></button>
+							</div>
+						</div>
+
+						<!-- 언론사 프로모션 링크 -->
+						
+					</div>
+					<div class="news_end_btn">
+						
+
+
+
+<script type="text/javascript" src="https://ssl.pstatic.net/static.sports/resources/pc/2021/06/24/212845/js/generated/likeItAndShare.js" charset="UTF-8"></script>
+
+
+
+
+	
+	
+	<div class="_reactionModule u_likeit" data-sid="SPORTS" data-did="SPORTS" data-cid="ne_076_0003746758" style="visibility: hidden">
+		<ul class="u_likeit_inline _faceLayer" role="menu">
+			<li class="u_likeit_list good" role="menuitem">
+				<a class="u_likeit_list_button _button" data-type="like" href="#" role="button" aria-selected="false">
+					<span class="u_likeit_list_name _label">좋아요</span>
+					<span class="u_likeit_list_count _count">0</span>
+				</a>
+			</li>
+			<li class="u_likeit_list sad" role="menuitem">
+				<a class="u_likeit_list_button _button" data-type="sad" href="#" role="button" aria-selected="false">
+					<span class="u_likeit_list_name _label">슬퍼요</span>
+					<span class="u_likeit_list_count _count">0</span>
+				</a>
+			</li>
+			<li class="u_likeit_list angry" role="menuitem">
+				<a class="u_likeit_list_button _button" data-type="angry" href="#" role="button" aria-selected="false">
+					<span class="u_likeit_list_name _label">화나요</span>
+					<span class="u_likeit_list_count _count">0</span>
+				</a>
+			</li>
+			<li class="u_likeit_list fan" role="menuitem">
+				<a class="u_likeit_list_button _button" data-type="fan" href="#" role="button" aria-selected="false">
+					<span class="u_likeit_list_name _label">팬이에요</span>
+					<span class="u_likeit_list_count _count">0</span>
+				</a>
+			</li>
+			<li class="u_likeit_list want" role="menuitem">
+				<a class="u_likeit_list_button _button" data-type="want" href="#" role="button" aria-selected="false">
+					<span class="u_likeit_list_name _label">후속기사 원해요</span>
+					<span class="u_likeit_list_count _count">0</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	
+	<div class="sns_share_wrap">
+		<div class="tomain" id="__markup_tomain">
+			<div class="u_likeit_list_module _reactionModule" data-sid="SPORTS_MAIN" data-cid="ne_076_0003746758">
+				<a href="#" class="u_likeit_list_btn u_type_tomain _button off" data-type="like" data-ishiddenzerocount="true" aria-pressed="false">
+					<span class="u_ico"></span>
+					<em class="u_txt _label">이 기사를 추천합니다</em>
+					<em class="u_cnt _count">0</em>
+				</a>
+			</div>
+			<button type="button" class="tomain_help_btn" id="_toMainHelpBtn"><span class="blind">도움말</span></button>
+		</div>
+		
+
+		
+		<div class="sns_area">
+			<a href="#" class="share naver-splugin" id="spiButton" data-style="unity-v2" data-option="{baseElement:'spiButton2', layerPosition:'outside-bottom', align:'right', top:4, left:0, marginLeft:8, marginTop:10}" data-oninitialize="splugin_oninitialize();">
+				<span class="sp_ico naver-splugin-c"></span>
+				<em class="blind">공유하기</em>
+			</a>
+		</div>
+		
+
+		<!-- 이 기사를 메인으로 - 레이어 -->
+		<div class="tomain_info" id="_toMainInfo">
+			<p class="tomain_info_layer is_hidden">
+				<strong class="tomain_info_head">모두에게 보여주고 싶은 기사라면<i>?</i><span class="tomain_info_betaicon">beta</span></strong>
+				<span class="tomain_info_body">
+					<strong class="tomain_info_point">이 기사를 추천합니다 </strong><span class="tomain_info_text">버튼을 눌러주세요. 집계 기간 동안 추천을 많이 받은 기사는 네이버 자동 기사배열 영역에 추천 요소로 활용됩니다.</span>
+				</span>
+				<a href="#" class="tomain_info_close" id="_toMainLayerOff">레이어 닫기</a>
+			</p>
+			<p class="tomain_info_phrase is_hidden" id="_newsMainHistory">
+				<span class="tomain_info_body">
+					<span class="tomain_info_text">이 기사는 </span><strong class="tomain_info_point">모바일 메인 스포츠판</strong><span class="tomain_info_text">에 노출된 이력이 있습니다.</span>
+				</span>
+			</p>
+			<p class="tomain_info_phrase is_hidden">
+				<span class="tomain_info_body">
+					<span class="tomain_info_text">이 기사는 </span><strong class="tomain_info_point">사용자 추천</strong><span class="tomain_info_text">으로 모바일 메인 스포츠판에 노출된 이력이 있습니다.</span>
+				</span>
+			</p>
+		</div>
+		<!-- //이 기사를 메인으로 - 레이어 -->
+	</div>
+
+
+
+<script>
+new naver.sports.common.LikeItAndShare({
+	"newsMainHistoryDate" : ""
+	, "likeItApiBaseUrl" : "https://sports.like.naver.com"
+});
+</script>
+
+
+	
+
+
+<script>
+	//js 더미 생성
+	t = new Date(), yyyy = t.getFullYear(), mm = t.getMonth() + 1, dd = t.getDate();
+	lazyloadjs("https://ssl.pstatic.net/spi/js/release/ko_KR/splugin.js?" +  yyyy + (mm < 10 ? '0' + mm : mm) + (dd < 10 ? '0' + dd : dd), function() {
+		window.__splugin = SocialPlugIn_Core({
+			//소셜 플러그인 기본 설정
+			// nEvent Key
+			"evKey"       : "sports",
+			// 서비스명
+			"serviceName" : "스포츠"
+		});
+	});
+
+	var spluginOptions = {};
+
+	
+		
+		
+		
+		
+			
+			spluginOptions.sourceName = "스포츠조선";
+			spluginOptions.likeServiceId =  "SPORTS";
+			spluginOptions.likeContentsId = "ne_076_0003746758";
+		
+	
+	splugin_oninitialize = _.bind(_splugin_oninitialize, this, location.href, "&quot;당당해서 좋다!&quot; '빵빵즈' 얼굴엔 '뉴 한화'의 자신감이 담겨 있다[SC초점]");
+
+	function _splugin_oninitialize(url, title) {
+
+		return $.extend({
+			url : url,
+			title  : title,
+			me : {
+				display : "off"
+			},
+			mail : {
+				srvid   : "news",
+				srvurl  : url
+			},
+			cafe : {
+				sourceType : "3"
+			},
+			blog : {
+				blogId : "naver",
+				sourceType : "3"
+			},
+			line : {
+				srvurl  : url + "&from=line"
+			},
+			kakaotalk : {
+				srvurl  : url + "&from=kakaotalk"
+			},
+			band : {
+				srvurl  : url + "&from=band"
+			}
+		}, spluginOptions);
+	}
+</script>
+
+
+
+					</div>
+					<div class="link_news">
+						
+							
+
+							<div class="link_popular_news">
+								<h3><span class="logo">스포츠조선</span> 주요뉴스<span>해당 언론사에서 선정하며 <em>언론사 페이지(아웃링크)</em>로 이동해 볼 수 있습니다.</span></h3>
+								<ul>
+									<li>
+										<a href="https://sports.chosun.com/news/ntype2.htm?id=202106240100198570012722&ServiceDate=20210624&sav=1" target="_blank">박지윤 '상위 1% 부자 남편' 급여만 34억→'이시영 남편♥' 연 매출 25억의 '청담동 사업가'</a>
+										
+									</li>
+								
+									<li>
+										<a href="https://sports.chosun.com/news/ntype2.htm?id=202106260100208460013340&ServiceDate=20210625&sav=2" target="_blank">KCM "母 산삼 챙겨준 지인에게 사기당해 전 재산 잃어"</a>
+										
+									</li>
+								
+									<li>
+										<a href="https://sports.chosun.com/news/ntype2.htm?id=202106230100187620011974&ServiceDate=20210623&sav=3" target="_blank">'김구라 子' 그리 "母의 무 사업 돕고 싶어 홍진경·김수미에 전화"</a>
+										
+									</li>
+								
+									<li>
+										<a href="https://sports.chosun.com/news/ntype2.htm?id=202106230100179230011477&ServiceDate=20210622&sav=4" target="_blank">'주진모♥' 의사 민혜연, 은밀한 속사정 '성욕' 공개</a>
+										
+									</li>
+								
+									<li>
+										<a href="https://sports.chosun.com/news/ntype2.htm?id=202106240100188600012033&ServiceDate=20210623&sav=5" target="_blank">의사 홍혜리 "청소년 첫관계..비닐봉투 피임 등 엽기적인 사례 많아"</a>
+										
+									</li>
+								
+								</ul>
+							</div>
+						
+					
+
+                        <a href="/all/news/office?ofc=076" class="link_press_collection" onclick="clickcr(this, 'aec.press', '', '', event);">
+                            <span class="logo">스포츠조선</span>
+                            <span class="text">기사 모아보기</span>
+                        </a>
+
+                        <script>
+                            var articleSectionGuide = $("#_article_section_guide");
+                            var articleSectionGuideLayer = articleSectionGuide.find(".guide_categorize");
+
+                            articleSectionGuide.delegate(".btn_guide_categorize", "click", function(e) {
+                                e.preventDefault();
+                                articleSectionGuideLayer.toggle();
+                            });
+
+                            articleSectionGuide.delegate(".btn_close", "click", function(e) {
+                                e.preventDefault();
+                                articleSectionGuideLayer.toggle();
+                            });
+                        </script>
+					</div>
+
+				
+				
+
+				
+				<div class="end_ad">
+					<iframe id="f540100" name="f540100" src="https://veta.naver.com/fxshow?su=SU10085&calp=kbaseball" width="660" height="0" marginheight="0" marginwidth="0" border="0" frameborder="0" scrolling="no" align="center" title="배너광고" data-veta-preview="p_sports_end"></iframe>
+				</div>
+
+				
+					
+						
+					
+					
+				
+
+				<div class="quick_top">
+					<a href="#">맨위로<span class="ico"></span></a>
+				</div>
+				
+			</div>
+		]]></content:encoded>
+    </item>
+  </channel>
+</rss>
