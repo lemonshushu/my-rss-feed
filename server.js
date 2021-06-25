@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const dotenv = require('dotenv')
 dotenv.config();
-const {getHHNews} = require('./functions.js')
+const getHHNews = require('./getHHNews.js')
 // const socketIO = require('socket.io')
 const http = require('http')
 
@@ -19,7 +19,7 @@ app.get('/feeds/:name', (req, res) => {
 const server = app.listen(PORT, () => {
   console.log(`Server is listening`);
   setInterval(async () => {
-    getHHNews();
+    await getHHNews();
     http.get('http://my-rss-feeds.herokuapp.com');
   }, 300000);
 });
