@@ -4,7 +4,7 @@ const DOMParser = require('dom-parser');
 const moment = require('moment');
 
 function buildItem(previewResponse, content, url, channel) {
-  const pubDate = moment(previewResponse.datetime, 'YYYY.MM.DD hh:mm', true).toDate().getTime();
+  const pubDate = moment(previewResponse.datetime, 'YYYY.MM.DD hh:mm', true).toDate().toUTCString();
   // console.log(pubDate);
   // console.log(Date.now());
   const item = channel.ele('item');

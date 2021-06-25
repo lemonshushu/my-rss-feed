@@ -6,7 +6,7 @@ function buildHeader(dict) {
   const channel = rss.ele('channel');
   channel.ele('title', null, dict.title)
   channel.ele('link', null, dict.link)
-  channel.ele('lastBuildDate', null, Date.now())
+  channel.ele('lastBuildDate', null, (new Date).toUTCString())
   channel.ele('language', null, dict.language)
   return {rss, channel};
 }
