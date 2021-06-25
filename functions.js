@@ -47,7 +47,7 @@ async function getHHNews() {
       if (response.ok) {
         const textResponse = await articlePage.text();
         const doc = new DOMParser().parseFromString(textResponse, 'text/html');
-        content = doc.getElementsByClassName('content')[0].innerHTML;
+        content = doc.getElementsByClassName('news_end')[0].innerHTML;
       }
       buildXML(firstItem, content, url);
     }
