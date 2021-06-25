@@ -40,7 +40,7 @@ async function getHHNews() {
     const response = await fetch('https://sports.news.naver.com/kbaseball/news/list?isphoto=N&type=team&team=HH');
     if (response.ok) {
       const jsonResponse = await response.json();
-      const firstItem = jsonResponse.list[0];
+      const firstItem = jsonResponse.list[1];
       const url = `https://sports.news.naver.com/news.nhn?oid=${firstItem.oid}&aid=${firstItem.aid}`
       let content = '';
       const articlePage = await fetch(url);
