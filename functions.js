@@ -13,14 +13,7 @@ function writeFile(xml) {
   })
 }
 
-function buildXML(previewResponse, content, url) {
-  const root = builder.create('rss', {'xmlns:content': 'http://purl.org/rss/1.0/modules/content/'});
-  const channel = root.ele('channel');
-  channel.ele('title', null, '네이버 스포츠-야구-한화')
-  channel.ele('link', null, `https://sports.news.naver.com/kbaseball/news/index?isphoto=N&type=team&team=HH`)
-  channel.ele('lastBuildDate', null, Date.now())
-  channel.ele('language', null, 'ko')
-  const item = channel.ele('item');
+function buildItem(previewResponse, content, url, item) {
   item.ele('author', null, previewResponse.officeName);
   item.ele('title', null, previewResponse.title)
   item.ele('link', null, url)
@@ -29,27 +22,40 @@ function buildXML(previewResponse, content, url) {
   item.ele('pubDate', null, previewResponse.datetime);
   const contentEncoded = item.ele('content:encoded');
   contentEncoded.dat(content);
-  let xml = root.end({pretty: true});
-  xml = xml.replace('<rss>', '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">');
-  writeFile(xml);
-  console.log('xml file written')
 }
 
 async function getHHNews() {
   try {
     const response = await fetch('https://sports.news.naver.com/kbaseball/news/list?isphoto=N&type=team&team=HH');
     if (response.ok) {
+
+      const rss = builder.create('rss', {'xmlns:content': 'http://purl.org/rss/1.0/modules/content/'});
+      const channel = rss.ele('channel');
+      channel.ele('title', null, '네이버 스포츠-야구-한화')
+      channel.ele('link', null, `https://sports.news.naver.com/kbaseball/news/index?isphoto=N&type=team&team=HH`)
+      channel.ele('lastBuildDate', null, Date.now())
+      channel.ele('language', null, 'ko')
+
       const jsonResponse = await response.json();
-      const firstItem = jsonResponse.list[1];
-      const url = `https://sports.news.naver.com/news.nhn?oid=${firstItem.oid}&aid=${firstItem.aid}`
-      let content = '';
-      const articlePage = await fetch(url);
-      if (response.ok) {
-        const textResponse = await articlePage.text();
-        const doc = new DOMParser().parseFromString(textResponse, 'text/html');
-        content = doc.getElementsByClassName('news_end')[0].innerHTML;
+      for (let i = 0 ; i < jsonResponse.list.length; i++) {
+        const article = jsonResponse.list[i]
+        const url = `https://sports.news.naver.com/news.nhn?oid=${article.oid}&aid=${article.aid}`
+        console.log(url);
+        let content = '';
+        const articlePage = await fetch(url);
+        if (response.ok) {
+          const textResponse = await articlePage.text();
+          const doc = new DOMParser().parseFromString(textResponse, 'text/html');
+          content = doc.getElementById('newsEndContents').innerHTML;
+        }
+        
+        const item = channel.ele('item');
+        buildItem(article, content, url, item);
+        let xml = rss.end({pretty: true});
+        xml = xml.replace('<rss>', '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">');
+        writeFile(xml);
+        console.log('xml file written')
       }
-      buildXML(firstItem, content, url);
     }
   } catch (error) {
     console.log(error);
