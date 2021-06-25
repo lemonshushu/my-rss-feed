@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 const builder = require('xmlbuilder');
 const fs = require('fs')
-const https = require('https');
 const DOMParser = require('dom-parser');
 
 function writeFile(xml) {
