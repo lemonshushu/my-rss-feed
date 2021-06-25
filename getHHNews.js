@@ -1,15 +1,19 @@
 const fetch = require('node-fetch');
 const {buildHeader, finishBuilding} = require('./functions.js')
 const DOMParser = require('dom-parser');
+const moment = require('moment');
 
 function buildItem(previewResponse, content, url, channel) {
+  const pubDate = moment(previewResponse.datetime, 'YYYY.MM.DD hh:mm', true).toDate().getTime();
+  // console.log(pubDate);
+  // console.log(Date.now());
   const item = channel.ele('item');
   item.ele('author', null, previewResponse.officeName);
   item.ele('title', null, previewResponse.title)
   item.ele('link', null, url)
   item.ele('guid', null, url)
   item.ele('description', null, previewResponse.subContent);
-  item.ele('pubDate', null, previewResponse.datetime);
+  item.ele('pubDate', null, pubDate);
   const contentEncoded = item.ele('content:encoded');
   contentEncoded.dat(content);
 }
