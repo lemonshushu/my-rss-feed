@@ -3,8 +3,8 @@ const builder = require('xmlbuilder');
 const fs = require('fs')
 const DOMParser = require('dom-parser');
 
-function writeFile(xml) {
-  fs.writeFile('feeds/first-item.xml', xml, {flag: 'w+'}, err => {
+function writeFile(xml, fileName) {
+  fs.writeFile(`feeds/${fileName}.xml`, xml, {flag: 'w+'}, err => {
     if (err) {
       console.error(err);
       return;
@@ -39,20 +39,24 @@ async function getHHNews() {
       for (let i = 0 ; i < jsonResponse.list.length; i++) {
         const article = jsonResponse.list[i]
         const url = `https://sports.news.naver.com/news.nhn?oid=${article.oid}&aid=${article.aid}`
-        console.log(url);
+        // console.log(url);
         let content = '';
         const articlePage = await fetch(url);
         if (response.ok) {
           const textResponse = await articlePage.text();
           const doc = new DOMParser().parseFromString(textResponse, 'text/html');
-          content = doc.getElementById('newsEndContents').innerHTML;
+          let contentDOM = doc.getElementById('newsEndContents');
+          content = contentDOM.innerHTML;
         }
         
         const item = channel.ele('item');
         buildItem(article, content, url, item);
         let xml = rss.end({pretty: true});
         xml = xml.replace('<rss>', '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">');
-        writeFile(xml);
+        const substrIndex = xml.indexOf('<p class="source">');
+        if (substrIndex != -1) xml = xml.slice(0, substrIndex);
+        xml += ']]></content:encoded></item></channel></rss>';
+        writeFile(xml, 'HH-news');
         console.log('xml file written')
       }
     }
