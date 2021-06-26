@@ -22,7 +22,15 @@ async function buildContent(url) {
   const articlePage = await fetch(url);
   if (articlePage.ok) {
     const textResponse = await articlePage.text();
+    if (contentDOM == null) {
+      console.log('nulldsdfsfdsfsd');
+      return '';
+    }
     const doc = new DOMParser().parseFromString(textResponse, 'text/html');
+    if (doc == null) {
+      console.log('nulfdsfsdl');
+      return '';
+    }
     let contentDOM = doc.getElementById('player');
     if (contentDOM == null) {
       console.log('null');
