@@ -17,6 +17,10 @@ app.get('/feeds/:name', (req, res) => {
   res.sendFile(__dirname + `/feeds/${req.params.name}.xml`);
 });
 
+app.get('/debug/:name', (req, res) => {
+  res.sendFile(__dirname + `/feeds/${req.params.name}.html`);
+});
+
 const server = app.listen(PORT, () => {
   console.log(`Server is listening`);
   setInterval(async () => {
