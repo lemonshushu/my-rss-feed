@@ -24,6 +24,7 @@ async function buildContent(url) {
     const textResponse = await articlePage.text();
     const doc = new DOMParser().parseFromString(textResponse, 'text/html');
     let contentDOM = doc.getElementById('player');
+    if (contentDOM == null) return '';
     content = contentDOM.innerHTML;
     const chunk = content.match(/thumbnail.*'(.*)'?/gm)[0];
     const src = chunk.match(/https:\/\/(.*).(jpg|png|jpeg)/gm)[0];
