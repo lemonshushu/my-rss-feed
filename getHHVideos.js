@@ -3,74 +3,41 @@ const {buildHeader, finishBuilding} = require('./functions.js')
 const DOMParser = require('dom-parser');
 const moment = require('moment');
 
-function buildItem(info, content, channel) {
+function buildItem(info, channel) {
   const item = channel.ele('item');
-  item.ele('title', null, `[${info.tag}] ${info.title}`)
+  item.ele('title', null, info.title)
   item.ele('link', null, info.url)
   item.ele('guid', null, info.url)
   item.ele('pubDate', null, info.pubDate);
   const contentEncoded = item.ele('content:encoded');
-  contentEncoded.dat(content);
-}
-
-async function buildContent(url) {
-  let content = '';
-  try {
-    const articlePage = await fetch(url);
-    const textResponse = await articlePage.text();
-    const doc = new DOMParser().parseFromString(textResponse, 'text/html');
-    let contentDOM = doc.getElementById('player');
-    const fileName = new URLSearchParams(url).get('id')
-    await require('fs').writeFile(__dirname + `/debug/${fileName}.html`, textResponse, err => console.log(err))
-    if (contentDOM == null) {
-      console.log('null');
-      return '';
-    }
-    content = contentDOM.innerHTML;
-    const chunk = content.match(/thumbnail.*'(.*)'?/gm)[0];
-    console.log(chunk + '\n');
-    const src = chunk.match(/https:\/\/(.*).(jpg|png|jpeg)/gm)[0];
-    return `<img src="${src}">`;
-  } catch (error) {
-    console.log(error)
-  }
-  // await page.goto(url, {waitUntil: 'networkidle0'});
-  // const html = await page.content();
-  // const doc = new DOMParser().parseFromString(html, 'text/html');
-  // let videoNode = doc.getElementsByClassName('rmcplayer')[0].outerHTML;
-  // return videoNode;
+  contentEncoded.dat(info.content);
 }
 
 async function getHHVideos() {
   try {
-    const response = await fetch('https://sports.news.naver.com/kbaseball/vod/ajax/videoContents?uCategory=&category=kbo&tab=team&listType=team&date=&gameId=&teamCode=HH&commentId=&disciplineCode=&round=0');
+    const response = await fetch('https://m.sports.naver.com/video/ajax/videoListByTeam.nhn?_callback=jQuery2140048529195965827165_1624748210767&page=1&pageSize=20&uCategory=kbaseball&category=kbo&date=&teamCode=HH&gameId=&keyword=&sort=date&tab=team&subSection=kbaseball&_=1624748210771');
     headerInfo = {
       title: '경기 영상-한화',
       link: 'https://sports.news.naver.com/kbaseball/vod/index?category=kbo',
       language: 'ko'
     }
     const {rss, channel} = buildHeader(headerInfo)
-    const htmlResponse = await response.text();
-    const doc = new DOMParser().parseFromString(htmlResponse, 'text/html'); 
-    const baseURL = 'https://sports.news.naver.com';
-    const videoList = doc.getElementsByClassName('video_list')[0].getElementsByTagName('ul')[0].childNodes;
-    // const browser = await puppeteer.launch({headless: true});
-    // const page = await browser.newPage();
+    let textResponse = await response.text();
+    textResponse = textResponse.replace('jQuery2140048529195965827165_1624748210767(', '');
+    textResponse = textResponse.replace(');', '');
+    const jsonResponse = JSON.parse(textResponse);
+    const videoList = jsonResponse.contents.videoList;
+    const baseURL = 'https://m.sports.naver.com/video.nhn?id=';
+
     for (let i = 0 ; i < videoList.length ; i++) {
-      const node = videoList[i];
-      if (node.nodeType === 3) continue;
-      const video = node.getElementsByClassName('videoImageLink')[0];
-      const textNode = video.getElementsByClassName('text')[0];
-      const dateNode = textNode.getElementsByClassName('info')[0].getElementsByClassName('date')[0];
+      const video = videoList[i];
       const videoInfo = {
-        url: baseURL + video.getAttribute('href'),
-        tag: textNode.getElementsByClassName('tag')[0].innerHTML,
-        title: textNode.getElementsByClassName('title')[0].innerHTML,
-        pubDate: moment(dateNode.lastChild.outerHTML, 'YYYY.MM.DD', true).toDate().toUTCString()
+        url: baseURL + video.videoMasterId,
+        title: video.title,
+        pubDate: moment(video.updateDateTime, 'YYYY-MM-DD HH:MM:SS.s', true).toDate().toUTCString(),
+        content: `<img src="${video.thumbnail}"/>`
       }
-      // console.log(videoInfo);
-      const content = await buildContent(videoInfo.url);
-      buildItem(videoInfo, content, channel);
+      buildItem(videoInfo, channel);
     }
     // await browser.close();
     await finishBuilding(rss, 'HH-videos');
