@@ -27,8 +27,8 @@ const server = app.listen(PORT, () => {
     await getHHNews();
     await getHHVideos();
     http.get('http://my-rss-feeds.herokuapp.com');
-  }, 30000);
-  // }, 10000);
+  // }, 30000);
+  }, 10000);
 });
 
 // const io = socketIO(server);
