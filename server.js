@@ -18,7 +18,7 @@ app.get('/feeds/:name', (req, res) => {
 });
 
 app.get('/debug/:name', (req, res) => {
-  res.sendFile(__dirname + `/feeds/${req.params.name}.html`);
+  res.sendFile(__dirname + `/debug/${req.params.name}.html`);
 });
 
 const server = app.listen(PORT, () => {
@@ -27,8 +27,8 @@ const server = app.listen(PORT, () => {
     await getHHNews();
     await getHHVideos();
     http.get('http://my-rss-feeds.herokuapp.com');
-  // }, 30000);
-  }, 10000);
+  }, 30000);
+  // }, 10000);
 });
 
 // const io = socketIO(server);
