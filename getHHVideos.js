@@ -21,7 +21,7 @@ async function buildContent(url) {
     const doc = new DOMParser().parseFromString(textResponse, 'text/html');
     let contentDOM = doc.getElementById('player');
     const fileName = new URLSearchParams(url).get('id')
-    require('fs').writeFile(__dirname + `/debug/${fileName}.html`, textResponse, err => console.log(err))
+    await require('fs').writeFile(__dirname + `/debug/${fileName}.html`, textResponse, err => console.log(err))
     if (contentDOM == null) {
       console.log('null');
       return '';
@@ -73,7 +73,7 @@ async function getHHVideos() {
       buildItem(videoInfo, content, channel);
     }
     // await browser.close();
-    finishBuilding(rss, 'HH-videos');
+    await finishBuilding(rss, 'HH-videos');
   } catch (error) {
     console.log(error)
   }

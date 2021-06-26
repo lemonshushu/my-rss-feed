@@ -16,7 +16,6 @@ async function finishBuilding(rss, fileName) {
   xml = xml.replace('<rss>', '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">');
   await fs.writeFile(__dirname + `/feeds/${fileName}.xml`, xml, err => console.log(err));
   console.log('xml file written')
-  
 }
 
 module.exports = {buildHeader, finishBuilding};
