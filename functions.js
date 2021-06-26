@@ -14,12 +14,8 @@ function buildHeader(dict) {
 async function finishBuilding(rss, fileName) {
   let xml = rss.end({pretty: true});
   xml = xml.replace('<rss>', '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">');
-  try {
-    await fs.writeFile(__dirname + `/feeds/${fileName}.xml`, xml);
-    console.log('xml file written')
-  } catch (error) {
-    console.log(error)
-  }
+  await fs.writeFile(__dirname + `feeds/${fileName}.xml`, xml, err => console.log(err));
+  console.log('xml file written')
   
 }
 

@@ -21,7 +21,7 @@ async function buildContent(url) {
     const doc = new DOMParser().parseFromString(textResponse, 'text/html');
     let contentDOM = doc.getElementById('player');
     const fileName = new URLSearchParams(url).get('id')
-    await require('fs').writeFile(__dirname + `/debug/${fileName}.html`, textResponse)
+    require('fs').writeFile(__dirname + `/debug/${fileName}.html`, textResponse, err => console.log(err))
     if (contentDOM == null) {
       console.log('null');
       return '';
