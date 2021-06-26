@@ -23,10 +23,6 @@ async function buildContent(url) {
   if (articlePage.ok) {
     const textResponse = await articlePage.text();
     const doc = new DOMParser().parseFromString(textResponse, 'text/html');
-    if (doc == null) {
-      console.log('nullsfdfdfd');
-      return '';
-    }
     let contentDOM = doc.getElementById('player');
     if (contentDOM == null) {
       console.log('null');
