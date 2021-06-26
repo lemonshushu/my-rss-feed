@@ -11,16 +11,16 @@ function buildHeader(dict) {
   return {rss, channel};
 }
 
-function finishBuilding(rss, fileName) {
+async function finishBuilding(rss, fileName) {
   let xml = rss.end({pretty: true});
   xml = xml.replace('<rss>', '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">');
-  fs.writeFile(`feeds/${fileName}.xml`, xml, {flag: 'w+'}, err => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-  })
-  console.log('xml file written')
+  try {
+    await fs.writeFile(`feeds/${fileName}.xml`, xml);
+    console.log('xml file written')
+  } catch (error) {
+    console.log(error)
+  }
+  
 }
 
 module.exports = {buildHeader, finishBuilding};
