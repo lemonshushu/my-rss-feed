@@ -47,8 +47,8 @@ async function getHHNews() {
         const url = `https://sports.news.naver.com/news.nhn?oid=${article.oid}&aid=${article.aid}`
         const content = await buildContent(url);
         buildItem(article, content, url, channel);
-        finishBuilding(rss, 'HH-news');
       }
+      await finishBuilding(rss, 'HH-news');
     }
   } catch (error) {
     console.log(error);
