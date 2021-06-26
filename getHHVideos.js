@@ -2,8 +2,6 @@ const fetch = require('node-fetch');
 const {buildHeader, finishBuilding} = require('./functions.js')
 const DOMParser = require('dom-parser');
 const moment = require('moment');
-const fs = require('fs')
-const puppeteer = require('puppeteer');
 
 function buildItem(info, content, channel) {
   // console.log(pubDate);
@@ -19,12 +17,24 @@ function buildItem(info, content, channel) {
   contentEncoded.dat(content);
 }
 
-async function buildContent(url, page) {
-  await page.goto(url, {waitUntil: 'networkidle0'});
-  const html = await page.content();
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  let videoNode = doc.getElementsByClassName('rmcplayer')[0].outerHTML;
-  return videoNode;
+async function buildContent(url) {
+  let content = '';
+  const articlePage = await fetch(url);
+  if (articlePage.ok) {
+    const textResponse = await articlePage.text();
+    const doc = new DOMParser().parseFromString(textResponse, 'text/html');
+    let contentDOM = doc.getElementById('player');
+    content = contentDOM.innerHTML;
+    const chunk = content.match(/thumbnail.*'(.*)'?/gm)[0];
+    const src = chunk.match(/https:\/\/(.*).(jpg|png|jpeg)/gm)[0];
+    console.log(src);
+    return `<img src="${src}">`;
+  }
+  // await page.goto(url, {waitUntil: 'networkidle0'});
+  // const html = await page.content();
+  // const doc = new DOMParser().parseFromString(html, 'text/html');
+  // let videoNode = doc.getElementsByClassName('rmcplayer')[0].outerHTML;
+  // return videoNode;
 }
 
 async function getHHVideos() {
@@ -41,10 +51,9 @@ async function getHHVideos() {
       const doc = new DOMParser().parseFromString(htmlResponse, 'text/html'); 
       const baseURL = 'https://sports.news.naver.com';
       const videoList = doc.getElementsByClassName('video_list')[0].getElementsByTagName('ul')[0].childNodes;
-      const browser = await puppeteer.launch({headless: true});
-      const page = await browser.newPage();
+      // const browser = await puppeteer.launch({headless: true});
+      // const page = await browser.newPage();
       for (let i = 0 ; i < videoList.length ; i++) {
-        console.log('for loop')
         const node = videoList[i];
         if (node.nodeType === 3) continue;
         const video = node.getElementsByClassName('videoImageLink')[0];
@@ -57,10 +66,10 @@ async function getHHVideos() {
           pubDate: moment(dateNode.lastChild.outerHTML, 'YYYY.MM.DD', true).toDate().toUTCString()
         }
         // console.log(videoInfo);
-        const content = await buildContent(videoInfo.url, page);
+        const content = await buildContent(videoInfo.url);
         buildItem(videoInfo, content, channel);
       }
-      await browser.close();
+      // await browser.close();
       finishBuilding(rss, 'HH-videos');
     }
   } catch (error) {
