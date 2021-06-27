@@ -32,7 +32,7 @@ async function getEbookCafe() {
       const articleInfo = {
         url: baseURL + article.articleId,
         title: article.subject,
-        pubDate: new Date(Number(article.writeDateTimestamp)).toUTCString,
+        pubDate: new Date(article.writeDateTimestamp).toUTCString(),
         content: `<img src="${article.representImage}"/>`,
         author: `${article.writerNickName}(${article.writerId})`,
         category: article.menuName,

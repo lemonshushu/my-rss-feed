@@ -5,7 +5,7 @@ dotenv.config();
 const getHHNews = require('./getHHNews.js')
 const getHHVideos = require('./getHHVideos.js')
 const getEbookCafe = require('./getEbookCafe.js');
-// const socketIO = require('socket.io')
+const getMlbpark = require('./getMlbpark.js')
 const http = require('http')
 
 const PORT = process.env.PORT || 3000;
@@ -28,11 +28,8 @@ const server = app.listen(PORT, () => {
     await getHHNews();
     await getHHVideos();
     await getEbookCafe();
+    await getMlbpark();
     http.get('http://my-rss-feeds.herokuapp.com');
   }, 300000);
   // }, 10000);
 });
-
-// const io = socketIO(server);
-
-// setInterval(() => io.emit('update', new Date().toTimeString()), 10000);
