@@ -10,8 +10,11 @@ function buildItem(info, channel) {
   item.ele('link', null, info.url)
   item.ele('guid', null, info.url)
   item.ele('pubDate', null, info.pubDate);
-  const contentEncoded = item.ele('content:encoded');
-  contentEncoded.dat(info.content);
+  if (info.content) {
+    const contentEncoded = item.ele('content:encoded');
+    contentEncoded.dat(info.content);
+  }
+  
 }
 
 async function getEbookCafe() {
@@ -28,17 +31,17 @@ async function getEbookCafe() {
     const baseURL = 'https://cafe.naver.com/ebook/';
 
     for (let i = 0 ; i < articleList.length ; i++) {
-      const article = articleList[i];
+      const article = articleList[i].item;
       const articleInfo = {
         url: baseURL + article.articleId,
         title: article.subject,
         pubDate: new Date(article.writeDateTimestamp).toUTCString(),
-        content: `<img src="${article.representImage}"/>`,
+        content: article.representImage ? `<img src="${article.representImage}"/>` : undefined,
         author: `${article.writerNickName}(${article.writerId})`,
         category: article.menuName,
       }
       if (articleInfo.category in ['팝니다(리더기)', '가입인사']) continue;
-      buildItem(articleInfo, channel);
+      await buildItem(articleInfo, channel);
     }
     await finishBuilding(rss, 'ebook-cafe');
   } catch (error) {
