@@ -42,7 +42,7 @@ async function getMlbpark() {
 
     for (let i = 0 ; i < tbody.childNodes.length ; i++) {
       const tr = tbody.childNodes[i];
-      if (!tr.getElementsByClassName('txt')[0] || !tr.getElementsByClassName('nick')) continue;
+      if (!tr.getElementsByClassName('txt')[0] || !tr.getElementsByClassName('nick')[0]) continue;
       const articleInfo = {
         url: tr.getElementsByClassName('txt')[0].getAttribute('href'),
         title: tr.getElementsByClassName('txt')[0].innerHTML,
